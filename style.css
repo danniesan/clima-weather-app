@@ -31,22 +31,27 @@ body {
   padding: 20px;
   font-size: 15px;
 }
+main {
+  padding: 30px 0;
+}
 h1 {
   font-size: 60px;
   line-height: 1.5;
   text-align: center;
 }
-
+.current-details {
+  display: flex;
+  flex-direction: column;
+}
+.current-temperature {
+  font-size: 80px;
+}
+.temp-icon {
+}
 footer {
   border-top: 1px solid #8ec5fc;
   font-family: monospace;
   padding-top: 8px;
   font-size: 12px;
   text-align: center;
-}
-main {
-  padding: 30px 0;
-}
-.current-temperature {
-  font-size: 80px;
 }
