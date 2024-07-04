@@ -3,19 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+
     <title>Clima App</title>
   </head>
   <body>
-    <div>
+    <div class="weather-app">
       <header>
-        <form>
-          <input type="search" placeholder="Enter a city..." required />
-          <input type="submit" value="Search" />
+        <form class="search-form" id="search-form">
+          <input
+            class="search-input"
+            id="search-input"
+            type="search"
+            placeholder="Enter a city..."
+            required
+          />
+          <input class="search-button" type="submit" value="Search" />
         </form>
       </header>
       <main>
-        <h1>City</h1>
-        <p>time, description, humidity, windspeed</p>
+        <h1 class="current-city" id="current-city">City</h1>
+        <p class="current-details">
+          <span class="date" id="time">day and time</span>,
+          <span class="description" id="description">description</span>,
+          <span class="humidity" id="humidity"
+            >Humidity: <strong class="current-detail-value"></strong> </span
+          >,
+          <span class="wind-speed" id="wind-speed"
+            >Wind: <strong class="current-detail-value"></strong>
+          </span>
+        </p>
+        <div class="current-temperature">
+          <span class="temp-icon" id="icon"></span>
+          <span class="temp-value" id="temperature-value"></span>
+          <span class="temp-unit"></span>
+        </div>
       </main>
       <footer>
         Project was coded by
@@ -27,7 +50,8 @@
           href="https://github.com/danniesan/clima-weather-app/settings "
           target="_blank"
           >open-sourced on GitHub</a
-        >and
+        >
+        and
         <a href="https://weather-app-clima.netlify.app/ " target="_blank"
           >hosted on Netlify</a
         >
