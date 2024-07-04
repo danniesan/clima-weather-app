@@ -42,7 +42,7 @@ h1 {
 .current-details {
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  align-items: flex-end;
 }
 .current-temperature {
   font-size: 80px;
