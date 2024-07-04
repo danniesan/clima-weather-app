@@ -45,12 +45,20 @@ h1 {
   align-items: flex-end;
 }
 .current-temperature {
+  display: flex;
   font-size: 80px;
 }
 .temp-icon {
+  position:relative
   font-size: 50px;
 }
+.temp-value{
+  position: relative;
+  bottom:100px
+}
 .temp-unit {
+  position: relative;
+  bottom:90px;
   font-size: 30px;
 }
 footer {
