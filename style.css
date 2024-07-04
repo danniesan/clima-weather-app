@@ -41,12 +41,16 @@ h1 {
 }
 .current-details {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
 }
 .current-temperature {
   font-size: 80px;
 }
 .temp-icon {
+  font-size: 60px;
+}
+.temp-unit {
+  font-size: 40px;
 }
 footer {
   border-top: 1px solid #8ec5fc;
