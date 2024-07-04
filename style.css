@@ -10,7 +10,7 @@ body {
   display: block;
   border-radius: 20px;
   margin: 60px auto;
-  max-width: 600px;
+  max-width: 500px;
   height: 550px;
   padding: 35px;
   box-shadow: 0 15px 25px #fbd0f5;
@@ -50,11 +50,12 @@ h1 {
 }
 .temp-icon {
   position:relative
+  bottom:90px;
   font-size: 50px;
 }
 .temp-value{
   position: relative;
-  bottom:100px
+  bottom:100px;
 }
 .temp-unit {
   position: relative;
