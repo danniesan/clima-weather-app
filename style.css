@@ -52,17 +52,17 @@ h1 {
 }
 .temp-icon {
   position: relative;
-  top: -90px;
+  top: -85px;
   width: 80px;
   height: 80px;
 }
 .temp-value {
   position: relative;
-  bottom: 100px;
+  bottom: 95px;
 }
 .temp-unit {
   position: relative;
-  bottom: 90px;
+  bottom: 85px;
   font-size: 30px;
 }
 
