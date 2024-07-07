@@ -1,25 +1,21 @@
 function updateWeather(response) {
+  console.log("weather data", response.data);
+
   let temperatureElement = document.querySelector("#temperature-value");
   let temperature = response.data.temperature.current;
   let cityElement = document.querySelector("#current-city");
+  let descriptionElement = document.querySelector("#description");
+  let humidityElement = document.querySelector("#humidity");
+  let windSpeedElement = document.querySelector("#wind-speed");
+  let date = new Date(response.data.time * 1000);
+  let iconElement = document.querySelector("#icon");
 
   cityElement.innerHTML = response.data.city;
-  temperatureElement.innerHTML = Math.round(temperature);
-
-  let date = new Date(response.data.time * 1000);
-  let timeElement = document.querySelector("#time");
   timeElement.innerHTML = formatDate(date);
-
-  let descriptionElement = document.querySelector("#description");
   descriptionElement.innerHTML = response.data.condition.description;
-
-  let humidityElement = document.querySelector("#humidity");
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
-
-  let windSpeedElement = document.querySelector("#wind-speed");
   windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
-
-  let iconElement = document.querySelector("#icon");
+  temperatureElement.innerHTML = Math.round(temperature);
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="temp-icon" />`;
 
   getForecast(response.data.city);
@@ -47,6 +43,7 @@ function formatDate(date) {
 function searchCity(city) {
   let apiKey = "bfb46b3ac41f3bd0tof60adf87306491";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
+
   axios.get(apiUrl).then(updateWeather);
 }
 
@@ -66,10 +63,12 @@ function formatDay(timestamp) {
 function getForecast(city) {
   let apiKey = "bfb46b3ac41f3bd0tof60adf87306491";
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}}&key=${apiKey}&units=imperial`;
-  axiosget(apiUrl).then(displayForecast);
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function displayForecast(response) {
+  let forecastElement = document.querySelector("#forecast");
+
   let forecastHtml = "";
 
   response.data.daily.forEach(function (day, index) {
@@ -79,9 +78,9 @@ function displayForecast(response) {
         `
   <div class="forecast-day">
     <div class="forecast-date">${formatDay(day.time)}</div>
-
+<div>
     <img src"${day.condition.icon_url}" class"forecast-icon"/>
-
+</div>
 
     <div class="forecast-temperatures">
       <div class="forecast-temp"><strong>${Math.round(
@@ -94,7 +93,6 @@ function displayForecast(response) {
     }
   });
 
-  let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = forecastHtml;
 }
 
