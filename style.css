@@ -71,7 +71,8 @@ h1 {
   margin-bottom: 10px;
 }
 .forecast-icon {
-  font-size: 30px;
+  width: 75px;
+  height: 75px;
   text-align: center;
 }
 .weather-forecast {
