@@ -74,16 +74,17 @@ function getForecast(city) {
 function displayForecast(response) {
 
   let forecastHtml = "";
+
    response.data.daily.forEach(function (day, index) {
     if (index < 5) {
-    forecastinnerHtml =
-      forecastinnerHtml +
+    forecastHtml =
+      forecastHtml +
       `
   <div class="forecast-day">
     <div class="forecast-date">${formatDay(day.time)}</div>
 
-    <div><img src"${day.condition.icon_url}" class"forecast-icon"/>
-    </div>
+    <img src"${day.condition.icon_url}" class"forecast-icon"/>
+
 
     <div class="forecast-temperatures">
       <div class="forecast-temp">
