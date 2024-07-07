@@ -75,18 +75,15 @@ function displayForecast(response) {
         `
   <div class="forecast-day">
     <div class="forecast-date">${formatDay(day.time)}</div>
-<div>
-    <img src"${day.condition.icon_url}" class="forecast-icon"/>
-</div>
+
+    <img src"${day.condition.icon_url}" class ="forecast-icon"/>
 
     <div class="forecast-temperatures">
-      <div class="forecast-temp"><strong>${Math.round(
-        day.temperature.maximum
-      )}°</strong></div>
+      <div class="forecast-temp">
+      <strong>${Math.round(day.temperature.maximum)}°</strong></div>
       <div class="forecast-temp">${Math.round(day.temperature.minimum)}°</div>
   </div>
-  </div>
-`;
+  </div>`;
     }
   });
   let forecastElement = document.querySelector("#forecast");
