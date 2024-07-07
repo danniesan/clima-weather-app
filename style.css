@@ -47,6 +47,7 @@ h1 {
 .current-temperature {
   display: flex;
   font-size: 80px;
+  margin: 0 auto;
 }
 .temp-icon {
   position: relative;
