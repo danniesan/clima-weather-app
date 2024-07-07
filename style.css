@@ -58,11 +58,11 @@ h1 {
 }
 .temp-value {
   position: relative;
-  bottom: 95px;
+  bottom: 90px;
 }
 .temp-unit {
   position: relative;
-  bottom: 85px;
+  bottom: 80px;
   font-size: 30px;
 }
 
