@@ -5,6 +5,7 @@ function updateWeather(response) {
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
   let windSpeedElement = document.querySelector("#wind-speed");
+  let timeElement = document.querySelector("#time");
   let date = new Date(response.data.time * 1000);
   let iconElement = document.querySelector("#icon");
 
@@ -65,8 +66,6 @@ function getForecast(city) {
 }
 
 function displayForecast(response) {
-  let forecastElement = document.querySelector("#forecast");
-
   let forecastHtml = "";
 
   response.data.daily.forEach(function (day, index) {
@@ -90,7 +89,7 @@ function displayForecast(response) {
 `;
     }
   });
-
+  let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = forecastHtml;
 }
 
