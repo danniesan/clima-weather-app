@@ -44,6 +44,7 @@ h1 {
   flex-direction: column;
   align-items: flex-end;
   margin: 0;
+  padding: 0 50px;
 }
 .current-temperature {
   display: flex;
@@ -52,17 +53,17 @@ h1 {
 }
 .temp-icon {
   position: relative;
-  top: -85px;
+  top: -80px;
   width: 80px;
   height: 80px;
 }
 .temp-value {
   position: relative;
-  bottom: 90px;
+  bottom: 85px;
 }
 .temp-unit {
   position: relative;
-  bottom: 80px;
+  bottom: 75px;
   font-size: 30px;
 }
 
