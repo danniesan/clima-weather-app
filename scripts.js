@@ -2,12 +2,15 @@ function updateWeather(response) {
   let temperatureElement = document.querySelector("#temperature-value");
   let temperature = response.data.temperature.current;
   let cityElement = document.querySelector("#current-city");
+
+
+  cityElement.innerHTML = response.data.city;
+  temperatureElement.innerHTML = Math.round(temperature);
+
   let date = new Date(response.data.time * 1000);
   let timeElement = document.querySelector("#time");
   timeElement.innerHTML = formatDate(date);
 
-  cityElement.innerHTML = response.data.city;
-  temperatureElement.innerHTML = Math.round(temperature);
 
   let descriptionElement = document.querySelector("#description");
   descriptionElement.innerHTML = response.data.condition.description;
@@ -69,20 +72,19 @@ function getForecast(city) {
 }
 
 function displayForecast(response) {
-  console.log(response.data);
 
-  let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
-  let forecastHTML = "";
+  let forecastHtml = "";
    response.data.daily.forEach(function (day, index) {
-    if (index < 6) {
-    forecastinnerHTML =
-      forecastinnerHTML +
+    if (index < 5) {
+    forecastinnerHtml =
+      forecastinnerHtml +
       `
   <div class="forecast-day">
     <div class="forecast-date">${formatDay(day.time)}</div>
+
     <div><img src"${day.condition.icon_url}" class"forecast-icon"/>
     </div>
-    </div>
+
     <div class="forecast-temperatures">
       <div class="forecast-temp">
         <strong>${Math.round(day.temperature.maximum)}°</strong>
