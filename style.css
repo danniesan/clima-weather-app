@@ -11,7 +11,7 @@ body {
   border-radius: 20px;
   margin: 60px auto;
   max-width: 500px;
-  height: 550px;
+  height: 600px;
   padding: 35px;
   box-shadow: 0 15px 25px #fbd0f5;
   border: 4px solid #fff;
@@ -43,6 +43,7 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  margin: 0;
 }
 .current-temperature {
   display: flex;
