@@ -63,6 +63,30 @@ h1 {
   bottom: 90px;
   font-size: 30px;
 }
+
+.forecast-date {
+  text-align: center;
+  font-size: 17px;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+.forecast-icon {
+  font-size: 30px;
+  text-align: center;
+}
+.weather-forecast {
+  display: flex;
+  justify-content: space-around;
+}
+.forecast-temperatures {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 6px;
+}
+.forecast-temp {
+  padding: 0 6px;
+}
 footer {
   border-top: 1px solid #8ec5fc;
   font-family: monospace;
